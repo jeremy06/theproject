@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ProjectorModelStoreContainer">
+    <EntitySet Name="Person" EntityType="ProjectorModel.Store.Person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Project" EntityType="ProjectorModel.Store.Project" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="Budget" Type="decimal" Scale="4" />
+  </EntityType>
+</Schema>

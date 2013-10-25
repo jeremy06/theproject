@@ -1,0 +1,464 @@
+﻿
+/*a
+{
+    text-decoration: none;
+    color: #333;
+}
+.link
+{
+    font-size: 10px;
+    font-weight: bolder;
+    font-family: Trebuchet MS;
+    color: #FF8800;
+    border: none;
+    background-color: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.link:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.link:active
+{
+    text-shadow: 0 0 1px #FFbb33;
+}
+.link-white
+{
+    font-size: 16px;
+    font-family: Trebuchet MS;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.link-white:hover
+{
+    text-shadow: 0 0 1px #ffffff;
+    cursor: pointer;
+}
+.link-white:active
+{
+    text-shadow: 0 0 3px #ffffff;
+}
+.link-black
+{
+    font-size: 12px;
+    font-family: Trebuchet MS;
+    color: #101010;
+    border: none;
+    background-color: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.link-black:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.link-black:active
+{
+    text-shadow: 0 0 1px #101010;
+}
+.border
+{
+    -moz-box-shadow: 0px 0px 7px #ccc, 0 0 1px #888;
+    -webkit-box-shadow: 0px 0px 7px #ccc, 0 0 1px #888;
+    box-shadow: 0px 0px 7px #ccc, 0 0 1px #888;
+    overflow: auto;
+}
+.aero
+{
+    overflow: auto;
+    background-image: url('Images/white_aero.png') !important;
+}
+.aero2
+{
+    overflow: auto;
+    background-image: url('Images/white_aero2.png') !important;
+}
+.white
+{
+    background-color: White;
+}
+.textbox-smaller
+{
+    height: 20px;
+    width: 100px;
+    border: Solid .1em #ccc;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.textbox-label
+{
+    height: 20px;
+    border: 0;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: Transparent;
+}
+.checkbox
+{
+    width: auto !important;
+}
+.textarea
+{
+    height: auto;
+    resize: vertical;
+    min-height: 200px;
+}
+/*datatables*/
+/*.grid
+{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    height: auto;
+}
+.dataTables_filter label, .dataTables_length label, .dataTables_info, .dataTables_filter input
+{
+    font-size: 12px;
+}*/
+/*
+.dataTables_length label, .dataTables_length select
+{
+    font-size: 12px;
+}
+.dataTables_length, .dataTables_filter
+
+{
+    width: auto;
+    padding-left: 10px;
+    float: right;
+}*/
+.dataTables_info
+{
+    width: auto;
+    float: right;
+    color: #888;
+    margin-left: 3px;
+}
+.dataTables_paginate
+{
+    width: auto;
+    padding-left: 10px;
+    float: right;
+    color: #888;
+}
+.grid thead
+{
+    height: 25px;
+    color: White;
+    font-weight: bolder;
+    background-color: #ccc;
+    color: #333;
+}
+/*.grid thead tr th.sorting:hover
+{
+    color: #22AAFF;
+    background: url("../Scripts/media/images/sort_both_glow.png") no-repeat scroll right center transparent;
+}*/
+.paging_full_numbers span a.paginate_active
+{
+    background-color: Transparent;
+    border: 0;
+    margin: 0 5px;
+}
+.paging_full_numbers a.paginate_button
+{
+    width: 40px;
+    padding: 3px 5px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #888;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+    background: -moz-linear-gradient(top, #FFF, #EEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#EEE');
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+}
+.paging_full_numbers a.paginate_button:hover
+{
+    background: #F8F8F8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+    background: -moz-linear-gradient(top, #EEE, #FFF);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEE', endColorstr='#FFF');
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+}
+.paging_full_numbers a.paginate_button:active
+{
+    background: #F8F8F8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+    background: -moz-linear-gradient(top, #EEE, #FFF);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEE', endColorstr='#FFF');
+    -moz-box-shadow: 0px 0px 1px #888;
+    -webkit-box-shadow: 0px 0px 1px #888;
+    box-shadow: 0px 0px 1px #888;
+}
+.paging_full_numbers a.paginate_button_disabled
+{
+    opacity: .3;
+}
+.paging_full_numbers a.paginate_button_disabled:hover
+{
+    width: 40px;
+    padding: 3px 5px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 3px;
+    cursor: default;
+    color: #888;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+    background: -moz-linear-gradient(top, #FFF, #EEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#EEE');
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+}
+.grid tr
+{
+    height: 25px;
+    background-color: transparent;
+    background-image: url('Images/white_aero.png');
+}
+.grid tr.odd
+{
+    background-image: url('Images/light_gray_aero.png');
+}
+.grid .selected
+{
+    background: #44BBFF !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#77CCFF), to(#11AAFF)) !important;
+    background: -moz-linear-gradient(top, #77CCFF, #11AAFF) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77CCFF', endColorstr='#11AAFF') !important;
+}
+/*.grid tr td.sorting_1
+{
+    height: 25px;
+    background-image: url('Images/white_aero.png');
+    background-color: transparent;
+}*/
+.grid tr.odd:hover td, .grid tr.even:hover td
+{
+    background: #44BBFF !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#77CCFF), to(#11AAFF)) !important;
+    background: -moz-linear-gradient(top, #77CCFF, #11AAFF) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77CCFF', endColorstr='#11AAFF') !important;
+}
+.grid tr.odd:hover td.dataTables_empty, .grid tr.even:hover td.dataTables_empty
+{
+    background-color: Transparent;
+}
+.dataTables_empty
+{
+    background-color: Transparent;
+    color: #aaa;
+    width: 100%;
+}
+.grid-header
+{
+    width: 100%;
+    padding-bottom: 10px;
+    position: relative;
+    float: left;
+    background-image: url('Images/white_aero.png');
+    height: 60px;
+}
+.grid-footer
+{
+    width: 100%;
+    padding-bottom: 10px;
+    position: relative;
+    float: left;
+    background-image: url('Images/white_aero.png');
+}
+.grid-bottom-button-container
+{
+    width: 50%;
+    margin: -30px 10px 10px 8px;
+    padding-bottom: 10px;
+    z-index: 4;
+    overflow: visible;
+    position: relative;
+}
+.grid-button
+{
+    width: auto;
+    padding: 3px 5px 3px 5px;
+    border: Solid .1em #ccc;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+.grid-button:hover
+{
+    background-color: #f8f8f8;
+    -moz-box-shadow: 0px 0px 7px #888;
+    -webkit-box-shadow: 0px 0px 7px #888;
+    box-shadow: 0px 0px 7px #888;
+}
+.grid-button:active
+{
+    -moz-box-shadow: 0px 0px 7px #22AAFF;
+    -webkit-box-shadow: 0px 0px 7px #22AAFF;
+    box-shadow: 0px 0px 7px #22AAFF;
+    background-color: #22AAFF;
+    color: White;
+}
+.dataTables_processing
+{
+    height: 0px;
+}
+.letter-navigation-container
+{
+    margin: 3px 0 0 8px;
+    float: left;
+    position: absolute;
+    z-index: 3;
+}
+.grid-navigation-container
+{
+    margin: 3px 0 0 8px;
+    float: left;
+    position: absolute;
+    z-index: 3;
+}
+.letter-navigation
+{
+    float: left;
+    width: 40px;
+    height: 17px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 2px;
+    cursor: pointer;
+    color: #555555;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+    background: -moz-linear-gradient(top, #FFF, #EEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#EEE');
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+}
+.letter-navigation-container .letter-navigation:first-child
+{
+    margin-left: 0;
+}
+.grid-navigation
+{
+    float: left;
+    padding: 0 10px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 2px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+}
+.letter-navigation-mini
+{
+    width: 30px;
+}
+.letter-navigation:hover, .grid-navigation:hover
+{
+    background: #F8F8F8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+    background: -moz-linear-gradient(top, #EEE, #FFF);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEE', endColorstr='#FFF');
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+}
+.letter-navigation:active, .grid-navigation:active
+{
+    background: #F8F8F8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+    background: -moz-linear-gradient(top, #EEE, #FFF);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEE', endColorstr='#FFF');
+    -moz-box-shadow: 0px 0px 1px #888;
+    -webkit-box-shadow: 0px 0px 1px #888;
+    box-shadow: 0px 0px 1px #888;
+}
+.letter-navigation-active
+{
+    background-color: Transparent;
+    background: none;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: default;
+    font-weight: bolder;
+}
+.letter-navigation-active:hover
+{
+    background-color: Transparent;
+    background: none;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/*DataTables sorting*/
+
+/*.sorting_asc
+{
+    background: url('Images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc
+{
+    background: url('Images/sort_desc.png') no-repeat center right;
+}
+
+.sorting
+{
+    background: url('Images/sort_both.png') no-repeat center right;
+}
+
+.sorting_asc_disabled
+{
+    background: url('Images/sort_asc_disabled.png') no-repeat center right;
+}
+
+.sorting_desc_disabled
+{
+    background: url('Images/sort_desc_disabled.png') no-repeat center right;
+}
+
+th:active
+{
+    outline: none;
+}
+.hidden
+{
+    visibility: hidden;
+}
+.hidden-minimized
+{
+    visibility: hidden;
+    height: 0px;
+}*/
+

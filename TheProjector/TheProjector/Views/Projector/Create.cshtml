@@ -1,0 +1,97 @@
+﻿@model TheProjector.Models.ProjectModel
+
+@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#btnSave').click(function (e) {
+            e.preventDefault();
+
+            var project = {}
+
+            project.Name = $('#Name').val(),
+                    project.Code = $('#Code').val(),
+                    project.Remarks = $('#Remarks').val(),
+                    project.Budget = $('#Budget').val()
+
+            var projectModel = { project: project };
+
+            $.ajax({
+                type: 'POST',
+                url: '/Projector/CreateProject',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify(projectModel),
+                success: function (response) {
+                    $('#message').removeClass('hide');
+                    $('#message').show();
+                    $('#message').html("<b>" + response.status + "</b>");
+                },
+                error: function (err) {
+                    console.log(err);
+                    $('#message').html(err);
+                }
+            });
+
+        });
+
+    });
+
+</script>
+
+<h2>The Projector</h2>
+<p>Create Project</p>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ProjectModel</legend>
+              
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Code)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Code)
+            @Html.ValidationMessageFor(model => model.Code)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Remarks)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Remarks)
+            @Html.ValidationMessageFor(model => model.Remarks )
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Budget)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Budget)
+            @Html.ValidationMessageFor(model => model.Budget)
+        </div>
+        <br />
+        <p>
+            <input type="submit" id="btnSave" value="Save" />
+        </p>
+         <div id="message" class="alert success hide"> test</div>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
